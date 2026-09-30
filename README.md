@@ -59,8 +59,8 @@ All seven are read-only and annotated as such (`readOnlyHint: true`, `destructiv
 
 | Tool | What it does |
 |---|---|
-| `caselaw_search` | Full-text search across all judgments; sort by relevance (nearest on the point, then court, bench, recency and citations), newest first, or court seniority. |
-| `caselaw_search_questions` | Find judgments by the legal question they settle — e.g. *"Can bail once granted be cancelled?"* — rather than by the words they contain. |
+| `caselaw_search` | Full-text search across all judgments, with optional filters: **court** ("Supreme Court", "LHC", "Sindh" ...), **judge** (spelling-tolerant - "Asif Khosa" finds Asif Saeed Khan Khosa; the reply names the judge matched), **journal** (with years, a volume such as SCMR 2025) and **year_from / year_to**. Keywords are optional when a filter is given: `court='Supreme Court'` alone lists the latest Supreme Court judgments. Sort: relevance, newest, court, or recently_added. For the current law on a point, keep relevance and add `year_from`. |
+| `caselaw_search_questions` | Find judgments by the legal question they settle — e.g. *"Can bail once granted be cancelled?"* — rather than by the words they contain. Filters: court, year_from, year_to. |
 | `caselaw_lookup_citation` | The judgment at an exact law-report citation (journal, year, page), e.g. PLD 1995 Supreme Court 34. |
 | `caselaw_get_case` | One judgment: metadata, outcome and headnote (`section='summary'`), or the full text too (`section='full'`). |
 | `caselaw_get_citations` | Walk the citation graph forward — the precedents a judgment relied on. |
@@ -79,6 +79,8 @@ re-phrase and search several ways, triage on the headnotes, then walk the citati
   alternate remedy exists? Give me the contrary authority as well."*
 - *"Trace the line of authority on khula — start from the most-cited case and work forward to the
   current position."*
+- *"What has Justice Asif Saeed Khan Khosa held on bail? List his judgments and what each decided."*
+- *"Show me the latest Supreme Court judgments, and the pre-arrest bail cases reported since 2025."*
 
 ## Coverage and limits
 
