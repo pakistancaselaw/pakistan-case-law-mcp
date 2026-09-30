@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.pakistancaselaw/caselaw",
+  "title": "Pakistan Case Law",
+  "description": "Search 230,000+ Pakistani court judgments by keyword, citation, or the legal question they settle.",
+  "version": "1.3.1",
+  "websiteUrl": "https://pakistancaselaw.com/for-ai",
+  "icons": [
+    {
+      "src": "https://pakistancaselaw.com/logo-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://pakistancaselaw.com/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "maintainer": "Hamadullah Shah, Advocate",
+      "maintainerUrl": "https://www.linkedin.com/in/hamadullah-shah-8a906a1a4",
+      "contact": "contact@pakistancaselaw.com",
+      "privacyPolicy": "https://pakistancaselaw.com/privacy",
+      "termsOfUse": "https://pakistancaselaw.com/terms",
+      "corpus": "230,000+ reported judgments and growing daily, Supreme Court / Federal Shariat Court / High Courts / tribunals, 1970 onward",
+      "auth": "none",
+      "readOnly": true
+    }
+  }
+}
