@@ -25,16 +25,22 @@ custom connector) and on Pro, Max, Team and Enterprise.
 claude mcp add --transport http caselaw https://pakistancaselaw.com/mcp
 ```
 
-### ChatGPT (Plus, Pro, Business, Enterprise, Edu — web)
-Settings → Security and login → turn on **Developer mode** → create an app with the MCP server URL
-`https://pakistancaselaw.com/mcp` and **No Authentication**.
+### ChatGPT
+Works on the Free plan. **Plugins** → **Add** → **Custom** → name it `Pakistan Case Law`, URL
+`https://pakistancaselaw.com/mcp` → **Add**; if asked about authentication, choose **No Authentication**.
+Don't see Custom? Turn on **Developer mode** under Settings → Security and login, then repeat.
+
+### Gemini (web and app)
+Works on the free Gemini app, in chat and in Gemini Spark. On a computer, go to
+[gemini.google.com](https://gemini.google.com) → **Settings** → **Connected Apps** (or **Personal Intelligence** →
+**Connected Apps**) → under **Custom apps**, **Add a custom app** → paste `https://pakistancaselaw.com/mcp` → **Next**.
+No credentials needed. Once added, it works in the mobile app too; type **@** to pick it in a chat.
+Needs a personal Google Account with **Keep Activity** on.
 
 ### Gemini CLI
 ```bash
 gemini mcp add --transport http caselaw https://pakistancaselaw.com/mcp
 ```
-Gemini Spark (Google AI Pro / Ultra): gemini.google.com → Settings & help → Connected Apps →
-**Custom apps for Spark** → add the URL above.
 
 ### Grok
 [grok.com/connectors](https://grok.com/connectors) → **New Connector** → **Custom** → paste the URL →
@@ -87,7 +93,7 @@ re-phrase and search several ways, triage on the headnotes, then walk the citati
 - 230,000+ reported judgments, new ones added daily. Citations follow the Pakistani law reports
   (PLD, SCMR, CLC, YLR, MLD, PCrLJ, PLC, PTD and others).
 - Headnotes and "questions settled" cover part of the corpus and are growing.
-- Rate limit: 240 tool calls per minute per session; over it, the reply says so and sets `Retry-After`.
+- Rate limited; over the limit, the reply says so and sets `Retry-After`.
 
 ## How to rely on the results
 
